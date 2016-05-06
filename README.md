@@ -1,2 +1,1 @@
-# coding_practice
-# coding_practice
+Practice problems for algorithms
