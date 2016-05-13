@@ -1,4 +1,4 @@
-#' Sory an array using the merge-sort algorithm
+#' Sort an array using the merge-sort algorithm
 #' 
 #' @param array An array
 #' @return Sorted array.
@@ -6,6 +6,8 @@
 #' array <- sample(seq(1,10))
 #' mergesort(array)
 
+
+# function for splitting the array in half
 split <- function(array){
   mid <- as.integer(length(array)/2)
   left <- array[1:mid]
@@ -13,6 +15,7 @@ split <- function(array){
   return (list(left, right))
 }
 
+# function for merging two sorted arrays into one sorted array
 merge <- function(left, right){
   if(left[length(left)] < right[1]){
     return (c(left, right))
@@ -47,6 +50,7 @@ merge <- function(left, right){
   return (result)
 }
 
+# recursive function for splitting, then merge sorting
 mergesort <- function(array){
   if (length(array) <= 1){
     return (array)
