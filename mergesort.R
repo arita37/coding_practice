@@ -23,8 +23,8 @@ merge <- function(left, right){
   else if (right[length(right)] < left[1]){
     return (c(right, left))
   }
-  left_idx = 1
-  right_idx = 1
+  left_idx <- 1
+  right_idx <- 1
   
   result <- c()
   
@@ -41,10 +41,10 @@ merge <- function(left, right){
   }
   
   if (left_idx <= length(left)){
-    result = c(result, left[left_idx:length(left)])
+    result <- c(result, left[left_idx:length(left)])
   }
   else if (right_idx <= length(right)){
-    result = c(result, right[right_idx:length(right)])
+    result <- c(result, right[right_idx:length(right)])
   }
   
   return (result)
